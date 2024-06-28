@@ -1,2 +1,1 @@
-# Arabic-PFB-Converter
-Converts Arabic text to its Presentational Form B version
+Converts Arabic text to its Presentational Form B version, allowing it to be used for programs and game engines that don't natively support Arabic text rendering
