@@ -1,9 +1,9 @@
 # arabic_char_data.py
 
-special_cases = {'ر', 'أ', 'إ', 'ا', 'ز', 'ذ', 'و', 'د', 'ﺎ', ' ﺭ ', ' ﺮ ', ' ﺮ ', ' أ ', ' ﺃ ', ' ﺄ ', ' إ ',
+special_cases = {'ّ','ر', 'أ', 'إ', 'ا', 'ز', 'ذ', 'و', 'د', 'ﺎ', ' ﺭ ', ' ﺮ ', ' ﺮ ', ' أ ', ' ﺃ ', ' ﺄ ', ' إ ',
                  ' ﺇ ', 'ﺈ', 'ا', ' ﺎ ', ' ﺎ ', ' ﺯ ', 'ﺮ', 'ﺰ', 'ﺫ', 'ﺬ', 'ﺬ', 'و', 'ﻮ', ' ﻮ ',
                  ' ﺩ ', ' ﺪ ', ' ﺪ ', 'ﺪ', 'ﺯ', 'ﺮ', 'ﺭ', 'ﺎ', 'ﻵ', '\uFEF7', '\uFEF8', 'ﻶ', 'ﻷ', '\uFEF9',
-                 '\uFEFA', 'ﻸ', 'ﻹ', '\uFEFB', '\uFEFC', 'ﻺ', 'ﻻ', '\uFEFB', '\uFEFC', 'ﻼ', 'ﺇ', 'ﺃ','أ','ﺄ','ﺆ',"/"}
+                 '\uFEFA', 'ﻸ', 'ﻹ', '\uFEFB', '\uFEFC', 'ﻺ', 'ﻻ', '\uFEFB', '\uFEFC', 'ﻼ', 'ﺇ', 'ﺃ','أ','ﺄ','ﺆ',"/",'ﺮ','ً','أ','ً','ً'}
 
 laam = ['\uFEDD', '\uFEDF', '\uFEE0', '\uFEDE']
 alf = ['ا', 'ا', 'ا', 'ﺎ', '\uFE8E',
@@ -45,7 +45,7 @@ forms = {
     'ل': {'isolated': 'ل', 'initial': '\uFEDF', 'medial': '\uFEE0', 'final': '\uFEDE'},
     'م': {'isolated': 'م', 'initial': '\uFEE3', 'medial': '\uFEE4', 'final': '\uFEE2'},
     'ن': {'isolated': 'ن', 'initial': '\uFEE7', 'medial': '\uFEE8', 'final': '\uFEE6'},
-    'ه': {'isolated': 'ه', 'initial': 'ﻫ', 'medial': '\uFEEC', 'final': 'ه'},
+    'ه': {'isolated': 'ه', 'initial': 'ﻫ', 'medial': '\uFEEC', 'final': 'ﻪ'},
     'ة': {'isolated': 'ة', 'initial': 'ة', 'medial': '\uFE94', 'final': '\uFE94'},
     'و': {'isolated': 'و', 'initial': 'و', 'medial': 'ﻮ', 'final': 'ﻮ'},
     'ي': {'isolated': 'ي', 'initial': 'ﻳ', 'medial': '\uFEF4', 'final': 'ﻲ'},
