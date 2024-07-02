@@ -51,7 +51,9 @@ def presentationformat(word, forms_dict):
         else:
             if prev in laam and char in alf:
                 result[-1] = ''
-                if len(result) > 0 and result[-2] in special_cases:
+                if len(result) > 1 and result[-2] in special_cases:
+                    form = 'isolated'
+                elif len(result) == 1:
                     form = 'isolated'
                 else:
                     form = 'final'
@@ -81,9 +83,9 @@ with open(input_file, 'r', encoding='utf-8') as f_in, open(output_file, 'w', enc
         processed_words = []
 
         for word in words:
-            special_char_positions = {i: char for i, char in enumerate(word) if char in "().،"}
+            special_char_positions = {i: char for i, char in enumerate(word) if char in "().،:"}
             temp_word = word.replace('/', ' / ')  # Add spaces around slashes
-            cleaned_word = ''.join([char for char in temp_word if char not in "().،"])  # Remove special characters except slashes
+            cleaned_word = ''.join([char for char in temp_word if char not in "().،:"])  # Remove special characters except slashes
 
             # Convert each segment separately
             segments = cleaned_word.split(' / ')
