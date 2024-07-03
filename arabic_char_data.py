@@ -1,26 +1,28 @@
-# arabic_char_data.py
-
-special_cases = {'ّ','ر', 'أ', 'إ', 'ا', 'ز', 'ذ', 'و', 'د', 'ﺎ', ' ﺭ ', ' ﺮ ', ' ﺮ ', ' أ ', ' ﺃ ', ' ﺄ ', ' إ ',
-                 ' ﺇ ', 'ﺈ', 'ا', ' ﺎ ', ' ﺎ ', ' ﺯ ', 'ﺮ', 'ﺰ', 'ﺫ', 'ﺬ', 'ﺬ', 'و', 'ﻮ', ' ﻮ ',
-                 ' ﺩ ', ' ﺪ ', ' ﺪ ', 'ﺪ', 'ﺯ', 'ﺮ', 'ﺭ', 'ﺎ', 'ﻵ', '\uFEF7', '\uFEF8', 'ﻶ', 'ﻷ', '\uFEF9',
-                 '\uFEFA', 'ﻸ', 'ﻹ', '\uFEFB', '\uFEFC', 'ﻺ', 'ﻻ', '\uFEFB', '\uFEFC', 'ﻼ', 'ﺇ', 'ﺃ','أ','ﺄ','ﺆ',"/",'ﺮ','ً','أ','ً','ً'}
+special_cases = {
+    'ّ', 'ر', 'أ', 'إ', 'ا', 'ز', 'ذ', 'و', 'د', 'ﺎ', 'ﺭ', 'ﺮ', 'ﺄ', 'ﺃ', 'ﺇ', 'ؤ', 'ﺈ', 'ﺯ', 'ﺪ', 'ﻮ',
+    'ﺬ', 'ﻵ', '\uFEF7', '\uFEF8', 'ﻶ', 'ﻷ', '\uFEF9', '\uFEFA', 'ﻸ', 'ﻹ', '\uFEFB', '\uFEFC', 'ﻺ', 'ﻻ',
+    '\uFEFB', '\uFEFC', 'ﻼ', 'ﺇ', 'ﺃ', 'ﺄ', 'ﺆ', '/', 'ً', 'ُ', 'ء'
+}
 
 laam = ['\uFEDD', '\uFEDF', '\uFEE0', '\uFEDE']
-alf = ['ا', 'ا', 'ا', 'ﺎ', '\uFE8E',
-       'أ', 'أ', 'أ', '\uFE83', '\uFE84',
-       'إ', 'إ', 'إ', '\uFE87', '\uFE88',
-       'آ', 'آ', 'آ', '\uFE81', '\uFE82']
 
-lamchar = {'آ': {'isolated': 'ﻵ', 'final': 'ﻶ'},
-           'أ': {'isolated': 'ﻷ', 'final': 'ﻸ'},
-           'إ': {'isolated': 'ﻹ', 'final': 'ﻺ'},
-           'ا': {'isolated': 'ﻻ', 'final': 'ﻼ'}, }
+alf = [
+    'ا', 'ا', 'ا', 'ﺎ', '\uFE8E', 'أ', 'أ', 'أ', '\uFE83', '\uFE84', 'إ', 'إ', 'إ', '\uFE87', '\uFE88',
+    'آ', 'آ', 'آ', '\uFE81', '\uFE82'
+]
+
+lamchar = {
+    'آ': {'isolated': 'ﻵ', 'final': 'ﻶ'},
+    'أ': {'isolated': 'ﻷ', 'final': 'ﻸ'},
+    'إ': {'isolated': 'ﻹ', 'final': 'ﻺ'},
+    'ا': {'isolated': 'ﻻ', 'final': 'ﻼ'},
+}
 
 forms = {
     'ا': {'isolated': 'ا', 'initial': 'ا', 'medial': 'ﺎ', 'final': 'ﺎ'},
     'أ': {'isolated': 'أ', 'initial': 'أ', 'medial': 'ﺄ', 'final': 'ﺄ'},
-    'إ': {'isolated': 'إ', 'initial': 'إ', 'medial': '\uFE87', 'final': '\uFE88'},
-    'آ': {'isolated': 'آ', 'initial': 'آ', 'medial': '\uFE81', 'final': '\uFE82'},
+    'إ': {'isolated': 'إ', 'initial': 'إ', 'medial': 'ﺈ', 'final': 'ﺈ'},
+    'آ': {'isolated': 'آ', 'initial': 'آ', 'medial': 'ﺂ', 'final': 'ﺂ'},
     'ب': {'isolated': 'ب', 'initial': '\uFE91', 'medial': '\uFE92', 'final': '\uFE90'},
     'ت': {'isolated': 'ت', 'initial': '\uFE97', 'medial': '\uFE98', 'final': '\uFE96'},
     'ث': {'isolated': 'ث', 'initial': '\uFE9B', 'medial': '\uFE9C', 'final': '\uFE9A'},
@@ -49,7 +51,7 @@ forms = {
     'ة': {'isolated': 'ة', 'initial': 'ة', 'medial': '\uFE94', 'final': '\uFE94'},
     'و': {'isolated': 'و', 'initial': 'و', 'medial': 'ﻮ', 'final': 'ﻮ'},
     'ي': {'isolated': 'ي', 'initial': 'ﻳ', 'medial': '\uFEF4', 'final': 'ﻲ'},
-    'ئ': {'isolated': 'ئ', 'initial': '\uFE8B', 'medial': '\uFE8C', 'final': '\uFE8D'},
+    'ئ': {'isolated': 'ئ', 'initial': '\uFE8B', 'medial': '\uFE8C', 'final': 'ﺊ'},
     'ى': {'isolated': 'ى', 'initial': 'ﻳ', 'medial': '\uFEF4', 'final': 'ﻰ'},
     'ؤ': {'isolated': 'ؤ', 'initial': 'ؤ', 'medial': '\uFE86', 'final': '\uFE86'},
 }
